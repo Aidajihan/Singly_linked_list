@@ -167,6 +167,15 @@ namespace Singly_linked_list
                                 obj.Traverse();
                             }
                             break;
+
+                        case '4':
+                            {
+                                if(obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break ;
+                                }
+                            }
                         
 
                             
