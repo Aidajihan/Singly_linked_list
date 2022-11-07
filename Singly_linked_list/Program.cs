@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Singly_linked_list
         {
             START = null;
         }
-        public void addNote()
+        public void addNote() //add a note in the list
         {
             int rollNo;
             string nm;
@@ -45,7 +46,39 @@ namespace Singly_linked_list
                 return;
             }
 
+            Node previous, current;
+            previous = START;
+            current = START;
+
+            while((current != null)&&(rollNo >= current.rollNumber))
+            {
+                if(rollNo == current.rollNumber)
+                {
+                    Console.WriteLine();
+                    return ;
+                }
+
+                previous.next = current;
+                previous.next = newnode;
+            }
+            newnode.next = current;
+            previous.next = newnode;
+
         }
+
+        public bool dellNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if(current == START)
+                START = START.next;
+            return true;
+        }
+
+        
 
     }
 
