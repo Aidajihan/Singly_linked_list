@@ -142,6 +142,17 @@ namespace Singly_linked_list
                             }
                             break;
 
+                        case '2':
+                            {
+                                if(obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nlist is empty");
+                                    break;
+                                }
+                                Console.WriteLine("enter the roll number of" +
+                                    "the student whose record is to be deleted: ");
+                            }
+
                         
 
                     }
