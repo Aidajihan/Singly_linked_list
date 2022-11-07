@@ -78,7 +78,20 @@ namespace Singly_linked_list
             return true;
         }
 
-        
+        public bool Search(int rollNo, ref Node Previous, ref Node current)
+        {
+            Previous = START;
+            current = START;
+            while ((current != null) && (rollNo >= current.rollNumber))
+            {
+                Previous = current;
+                current = current.next;
+            }
+            if (current == null)
+                return false;
+            else
+                return true;
+        }
 
     }
 
