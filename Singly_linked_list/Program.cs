@@ -183,8 +183,17 @@ namespace Singly_linked_list
                                 if (obj.Search(num, ref previous, ref current) == false)
                                     Console.WriteLine("\nRecord not found");
                                 else
+                                {
+                                    Console.WriteLine("\nRecord not found");
+                                    Console.WriteLine("\nRoll number: " + current.rollNumber);
+                                    Console.WriteLine("\nName " + current.name);
+                                }
 
                             }
+                            break;
+                        case '5':
+                            return;
+                        
                         
 
                             
