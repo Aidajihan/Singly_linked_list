@@ -123,6 +123,30 @@ namespace Singly_linked_list
         {
             List obj = new List();
             while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMENU");
+                    Console.WriteLine("1. add a record to the list");
+                    Console.WriteLine("2. delete a record from the list");
+                    Console.WriteLine("3. view all the records in the list ");
+                    Console.WriteLine("4. Search for a record in the list");
+                    Console.WriteLine("5. EXIT");
+                    Console.Write("\nEnter your choice (1-5) : ");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    switch(ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNote();
+                            }
+                            break;
+
+                        
+
+                    }
+                }
+            }
         }
     }
 }
